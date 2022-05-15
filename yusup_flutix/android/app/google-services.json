@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "888935858698",
+    "project_id": "yusup-flutix",
+    "storage_bucket": "yusup-flutix.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:888935858698:android:a3ab5e34f90346ac6055f3",
+        "android_client_info": {
+          "package_name": "com.yusup.flutix.yusup_flutix"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "888935858698-5bfq8cjaa6ji7i8okf9atft7i2pbmubn.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAk8IGufriu3jkjiDS6oMxa-AK040TlIC0"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "888935858698-5bfq8cjaa6ji7i8okf9atft7i2pbmubn.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
