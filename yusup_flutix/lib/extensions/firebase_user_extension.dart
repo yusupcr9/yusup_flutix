@@ -7,10 +7,12 @@ extension FirebaseUserExtension on User {
           String selectedLanguage = "English",
           String profilePicture = "",
           int balance = 50000}) =>
-      YUser(this.uid, this.email!,
+      YUser(uid, email!,
           name: name,
           selectedGenres: selectedGenres,
           selectedLanguage: selectedLanguage,
           profilePicture: profilePicture,
           balance: balance);
+
+  Future<YUser> fromFireStore() async => await UserServices.getUser(uid);
 }

@@ -15,4 +15,19 @@ class UserServices {
       'balance': user.balance,
     });
   }
+
+  static Future<YUser> getUser(String id) async {
+    DocumentSnapshot snapshot = await _userCollection.doc(id).get();
+    return YUser(
+      id,
+      snapshot['email'],
+      name: snapshot['name'],
+      profilePicture: snapshot['profilePicture'],
+      selectedGenres: (snapshot['selectedGenres'] as List)
+          .map((e) => e.toString())
+          .toList(),
+      selectedLanguage: snapshot['selectedLanguage'],
+      balance: snapshot['balance'],
+    );
+  }
 }
