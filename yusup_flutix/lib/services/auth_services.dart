@@ -13,7 +13,7 @@ class AuthServices {
     try {
       UserCredential result = await _auth.createUserWithEmailAndPassword(
           email: email, password: password);
-      YUser yuser = result.user!.convertToYUser(
+      FlutixUser yuser = result.user!.convertToFlutixUser(
           name: name,
           selectedGenres: selectedGenres,
           selectedLanguage: selectedLanguage);
@@ -31,7 +31,7 @@ class AuthServices {
     try {
       UserCredential result = await _auth.signInWithEmailAndPassword(
           email: email, password: password);
-      YUser yuser = await result.user!.fromFireStore();
+      FlutixUser yuser = await result.user!.fromFireStore();
       return SignInSignUpResult(user: yuser);
     } catch (e) {
       return SignInSignUpResult(message: e.toString().split('] ')[1]);
@@ -44,7 +44,7 @@ class AuthServices {
 }
 
 class SignInSignUpResult {
-  final YUser? user;
+  final FlutixUser? user;
   final String? message;
 
   SignInSignUpResult({this.user, this.message});

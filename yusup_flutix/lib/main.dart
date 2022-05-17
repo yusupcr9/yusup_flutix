@@ -47,7 +47,7 @@ class MyApp extends StatelessWidget {
                 ElevatedButton(
                     onPressed: () async {
                       SignInSignUpResult result = await AuthServices.signIn(
-                          email: "jennie@blackpink.com", password: "1234567");
+                          email: "jennie@blackpink.com", password: "123456");
                       if (result.user == null) {
                         print(result.message);
                       } else {

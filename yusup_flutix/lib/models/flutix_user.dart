@@ -1,6 +1,6 @@
 part of 'models.dart';
 
-class YUser extends Equatable {
+class FlutixUser extends Equatable {
   final String id;
   final String email;
   final String? name;
@@ -9,7 +9,7 @@ class YUser extends Equatable {
   final String? selectedLanguage;
   final int? balance;
 
-  YUser(this.id, this.email,
+  FlutixUser(this.id, this.email,
       {this.name,
       this.profilePicture,
       this.selectedGenres,
