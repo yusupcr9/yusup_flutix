@@ -9,14 +9,19 @@ class YUser extends Equatable {
   final String? selectedLanguage;
   final int? balance;
 
-  YUser(
-      {required this.id,
-      required this.email,
-      this.name,
+  YUser(this.id, this.email,
+      {this.name,
       this.profilePicture,
       this.selectedGenres,
       this.selectedLanguage,
       this.balance});
+
+  @override
+  String toString() {
+    // TODO: implement toString
+    return "[$id] - $name, $email";
+  }
+
   @override
   // TODO: implement props
   List<Object?> get props => [
