@@ -1,7 +1,9 @@
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:provider/provider.dart';
+import 'package:yusup_flutix/bloc/blocs.dart';
 import 'package:yusup_flutix/services/services.dart';
 import 'package:yusup_flutix/ui/pages/pages.dart';
 
@@ -20,12 +22,15 @@ class MyApp extends StatelessWidget {
     return StreamProvider.value(
       value: AuthServices.userStream,
       initialData: FirebaseAuth.instance.currentUser,
-      child: MaterialApp(
-          title: 'Yusup Flutix',
-          theme: ThemeData(
-            primarySwatch: Colors.blue,
-          ),
-          home: Wrapper()),
+      child: MultiBlocProvider(
+        providers: [BlocProvider(create: (_) => PageBloc())],
+        child: MaterialApp(
+            title: 'Yusup Flutix',
+            theme: ThemeData(
+              primarySwatch: Colors.blue,
+            ),
+            home: Wrapper()),
+      ),
     );
   }
 }
