@@ -1,6 +1,5 @@
 import 'package:bloc/bloc.dart';
 import 'package:equatable/equatable.dart';
-import 'package:meta/meta.dart';
 import 'package:yusup_flutix/models/models.dart';
 import 'package:yusup_flutix/services/services.dart';
 

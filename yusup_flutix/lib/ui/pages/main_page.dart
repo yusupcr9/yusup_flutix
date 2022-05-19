@@ -12,7 +12,7 @@ class _MainPageState extends State<MainPage> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text("Main Page"),
+        title: const Text("Main Page"),
       ),
       body: Center(
         child: Column(
@@ -21,13 +21,13 @@ class _MainPageState extends State<MainPage> {
             BlocBuilder<UserBloc, UserState>(
               builder: (_, userState) => (userState is UserLoaded)
                   ? Text(userState.user.name!)
-                  : SizedBox(),
+                  : const SizedBox(),
             ),
             ElevatedButton(
                 onPressed: () {
                   AuthServices.signOut();
                 },
-                child: Text("Sign Out")),
+                child: const Text("Sign Out")),
           ],
         ),
       ),

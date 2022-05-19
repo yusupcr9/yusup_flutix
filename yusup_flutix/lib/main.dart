@@ -26,13 +26,18 @@ class MyApp extends StatelessWidget {
         providers: [
           BlocProvider(create: (_) => PageBloc()),
           BlocProvider(create: (_) => UserBloc()),
+          BlocProvider(create: (_) => ThemeBloc()),
         ],
-        child: MaterialApp(
-            title: 'Yusup Flutix',
-            theme: ThemeData(
-              primarySwatch: Colors.blue,
-            ),
-            home: Wrapper()),
+        child: BlocBuilder<ThemeBloc, ThemeState>(
+          builder: (_, themeState) {
+            return MaterialApp(
+                title: 'Yusup Flutix',
+                theme: ThemeData(
+                  primarySwatch: Colors.blue,
+                ),
+                home: const Wrapper());
+          },
+        ),
       ),
     );
   }

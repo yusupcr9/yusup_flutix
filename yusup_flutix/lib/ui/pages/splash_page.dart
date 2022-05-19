@@ -8,19 +8,19 @@ class SplashPage extends StatelessWidget {
     return Scaffold(
       backgroundColor: Colors.white,
       body: Container(
-          padding: EdgeInsets.symmetric(horizontal: defaultMargin),
+          padding: const EdgeInsets.symmetric(horizontal: defaultMargin),
           child: Column(
             mainAxisAlignment: MainAxisAlignment.center,
             crossAxisAlignment: CrossAxisAlignment.center,
             children: [
               Container(
                 height: 136,
-                decoration: BoxDecoration(
+                decoration: const BoxDecoration(
                     image:
                         DecorationImage(image: AssetImage("assets/logo.png"))),
               ),
               Container(
-                margin: EdgeInsets.only(top: 70, bottom: 16),
+                margin: const EdgeInsets.only(top: 70, bottom: 16),
                 child: Text(
                   "New Experience",
                   style: blackTextFont.copyWith(fontSize: 20),
@@ -35,7 +35,7 @@ class SplashPage extends StatelessWidget {
               Container(
                 width: 250,
                 height: 46,
-                margin: EdgeInsets.only(top: 70, bottom: 19),
+                margin: const EdgeInsets.only(top: 70, bottom: 19),
                 child: ElevatedButton(
                   child: Text(
                     "Get Started",

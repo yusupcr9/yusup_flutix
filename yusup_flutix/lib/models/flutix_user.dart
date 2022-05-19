@@ -9,7 +9,7 @@ class FlutixUser extends Equatable {
   final String? selectedLanguage;
   final int? balance;
 
-  FlutixUser(this.id, this.email,
+  const FlutixUser(this.id, this.email,
       {this.name,
       this.profilePicture,
       this.selectedGenres,
