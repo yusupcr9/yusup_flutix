@@ -37,9 +37,7 @@ class _MainPageState extends State<MainPage> {
               });
             },
             children: [
-              Center(
-                child: Text("New Movie"),
-              ),
+              MoviePage(),
               Center(
                 child: Text("My Tickets"),
               ),
@@ -55,14 +53,14 @@ class _MainPageState extends State<MainPage> {
               child: FloatingActionButton(
                 elevation: 0,
                 backgroundColor: accentColor2,
-                onPressed: () {},
+                onPressed: () {
+                  context.read<UserBloc>().add(SignOut());
+                  AuthServices.signOut();
+                },
                 child: SizedBox(
                   height: 26,
                   width: 26,
-                  child: Icon(
-                    Icons.wallet_rounded,
-                    color: Colors.black.withOpacity(0.54),
-                  ),
+                  child: Image.asset("assets/top_up.png"),
                 ),
               ),
             ),
