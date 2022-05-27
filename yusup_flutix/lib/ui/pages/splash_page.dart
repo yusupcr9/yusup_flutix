@@ -44,7 +44,12 @@ class SplashPage extends StatelessWidget {
                   style: ElevatedButton.styleFrom(
                     primary: mainColor,
                   ),
-                  onPressed: () {},
+                  onPressed: () {
+                    RegistrationData registrationData = RegistrationData();
+                    context
+                        .read<PageBloc>()
+                        .add(GoToRegistrationPage(registrationData));
+                  },
                 ),
               ),
               Row(
